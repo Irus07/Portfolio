@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Руслан | Резюме — Backend-разработчик (Go / C# / C++)</title>
+  <meta name="description" content="Резюме: Backend-разработчик (Go / C# / C++). ASP.NET Core, Golang, Modern C++, PostgreSQL, Docker, xUnit, WPF.">
+  <!-- Devicon Icons CDN -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <style>
+    :root {
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --primary: #0284c7;
+      --border: #e2e8f0;
+      --bg: #ffffff;
+      --tag-bg: #f1f5f9;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background-color: #f8fafc;
+      line-height: 1.55;
+      padding: 30px 16px;
+    }
+
+    .resume-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 48px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .top-actions {
+      max-width: 860px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      color: var(--text);
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .btn-primary:hover {
+      background: #0369a1;
+    }
+
+    /* Header */
+    .header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 24px;
+      margin-bottom: 28px;
+    }
+
+    .name {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.02em;
+    }
+
+    .title {
+      font-size: 1.25rem;
+      color: var(--primary);
+      font-weight: 700;
+      margin-top: 4px;
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 14px;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    .meta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .meta-item a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 26px;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #0f172a;
+      border-bottom: 1.5px solid var(--border);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+
+    /* Skills Grid */
+    .skills-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-pill {
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      padding: 5px 11px;
+      border-radius: 5px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #334155;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .skill-pill i {
+      font-size: 15px;
+      line-height: 1;
+    }
+
+    .skill-pill.highlight {
+      background: #e0f2fe;
+      border-color: #bae6fd;
+      color: #0369a1;
+      font-weight: 600;
+    }
+
+    /* Experience blocks */
+    .exp-item {
+      margin-bottom: 20px;
+    }
+
+    .exp-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0f172a;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+
+    .exp-sub {
+      font-size: 0.85rem;
+      color: var(--primary);
+      font-weight: 600;
+      margin-top: 2px;
+      margin-bottom: 8px;
+    }
+
+    .exp-bullets {
+      list-style-type: disc;
+      padding-left: 20px;
+      font-size: 0.92rem;
+      color: #334155;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        background: #ffffff !important;
+        padding: 0 !important;
+      }
+
+      .top-actions {
+        display: none !important;
+      }
+
+      .resume-wrapper {
+        border: none !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+      }
+
+      .section {
+        page-break-inside: avoid;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Toolbar -->
+  <div class="top-actions">
+    <a href="index.html" class="btn">
+      ← Вернуться к портфолио
+    </a>
+    <button onclick="window.print()" class="btn btn-primary">
+      🖨️ Распечатать / Сохранить в PDF
+    </button>
+  </div>
+
+  <!-- A4 CV Sheet -->
+  <main class="resume-wrapper">
+    <header class="header">
+      <h1 class="name">Руслан</h1>
+      <div class="title">Backend-разработчик (Go / C# / C++)</div>
+
+      <div class="meta-row">
+        <div class="meta-item">
+          💼 Позиция: Junior / Стажер Backend Developer
+        </div>
+        <div class="meta-item">
+          🔗 GitHub: <a href="https://github.com/Irus07" target="_blank">github.com/Irus07</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Skills -->
+    <section class="section">
+      <h2 class="section-title">Навыки и технологии</h2>
+      <div class="skills-box">
+        <span class="skill-pill highlight"><i class="devicon-go-plain colored"></i> Go (Golang)</span>
+        <span class="skill-pill highlight"><i class="devicon-csharp-plain colored"></i> C# / ASP.NET Core</span>
+        <span class="skill-pill highlight"><i class="devicon-cplusplus-plain colored"></i> C++ (Modern C++17/20, STL)</span>
+        <span class="skill-pill highlight"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
+        <span class="skill-pill highlight"><i class="devicon-docker-plain colored"></i> Docker</span>
+        <span class="skill-pill highlight"><i class="devicon-dot-net-plain colored"></i> Entity Framework Core</span>
+        <span class="skill-pill highlight">🛡️ xUnit (70%+ coverage)</span>
+        <span class="skill-pill"><i class="devicon-git-plain colored"></i> Git & GitHub Actions</span>
+        <span class="skill-pill"><i class="devicon-linux-plain"></i> Linux & Bash</span>
+        <span class="skill-pill"><i class="devicon-vuejs-plain colored"></i> Vue.js</span>
+        <span class="skill-pill"><i class="devicon-typescript-plain colored"></i> TypeScript</span>
+        <span class="skill-pill">⚡ Clean Architecture & DI</span>
+        <span class="skill-pill">🌐 RESTful API & gRPC</span>
+        <span class="skill-pill">🖥️ WPF (MVVM Toolkit)</span>
+        <span class="skill-pill">🤖 AI-assisted Development (+20-30%)</span>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section">
+      <h2 class="section-title">Практический опыт и проекты</h2>
+
+      <!-- Item 1: REST API -->
+      <div class="exp-item">
+        <div class="exp-title">
+          <span>Веб-разработка: RESTful API на ASP.NET Core</span>
+          <span style="font-size:0.85rem; color:var(--text-muted);">C# • .NET • PostgreSQL</span>
+        </div>
+        <div class="exp-sub">Система бронирования и управления заказами</div>
+        <ul class="exp-bullets">
+          <li>Спроектировал и реализовал полный цикл RESTful эндпоинтов (GET, POST, PUT, PATCH, DELETE) с кастомными статус-кодами и DTO-моделями.</li>
+          <li>Применил паттерн «Репозиторий» и Внедрение зависимостей (Dependency Injection) для тестируемости и слабой связанности компонентов.</li>
+          <li>Спроектировал схему БД методом Code First с контролем версий через миграции Entity Framework Core.</li>
+          <li>Написал оптимизированные запросы через LINQ с комплексной фильтрацией, сортировкой и пагинацией данных.</li>
+          <li>Обеспечил покрытие кода модульными и интеграционными тестами на уровне 70%+ с помощью xUnit.</li>
+          <li>Внедрил AI-агентов и генеративные инструменты для ускорения написания шаблонного кода, прототипирования и рефакторинга (сократило время разработки на 20–30%).</li>
+        </ul>
+      </div>
+
+      <!-- Item 2: C++ Systems -->
+      <div class="exp-item">
+        <div class="exp-title">
+          <span>C++: Системная разработка и алгоритмы</span>
+          <span style="font-size:0.85rem; color:var(--text-muted);">Modern C++ • STL • Память</span>
+        </div>
+        <div class="exp-sub">Высокопроизводительная обработка и структуры данных</div>
+        <ul class="exp-bullets">
+          <li>Активно изучаю и практикую современный C++ (C++17/C++20), контейнеры STL и алгоритмы стандартной библиотеки.</li>
+          <li>Практикую концепции безопасного управления памятью через RAII и умные указатели (<code>std::unique_ptr</code>, <code>std::shared_ptr</code>).</li>
+          <li>Разбираюсь в многопоточности (<code>std::thread</code>, синхронизация, мьютексы) и готов писать продакшен-код на C++.</li>
+        </ul>
+      </div>
+
+      <!-- Item 3: Go (Golang) -->
+      <div class="exp-item">
+        <div class="exp-title">
+          <span>Go (Golang): Высокопроизводительные микросервисы</span>
+          <span style="font-size:0.85rem; color:var(--text-muted);">Go • Goroutines • Channels • gRPC</span>
+        </div>
+        <div class="exp-sub">Параллельная обработка задач и сетевые интерфейсы</div>
+        <ul class="exp-bullets">
+          <li>Разработка воркеров для параллельной обработки данных с использованием пула горутин и каналов Go.</li>
+          <li>Реализация межсервисного взаимодействия через gRPC и Protobuf для минимальных сетевых задержек.</li>
+          <li>Упаковка сервисов в легковесные Docker-контейнеры для стандартизированного развертывания.</li>
+        </ul>
+      </div>
+
+      <!-- Item 4: WPF Desktop -->
+      <div class="exp-item">
+        <div class="exp-title">
+          <span>Десктопная разработка: WPF Client с паттерном MVVM</span>
+          <span style="font-size:0.85rem; color:var(--text-muted);">C# • WPF • Community Toolkit</span>
+        </div>
+        <div class="exp-sub">Многопоточный настольный клиент для системы бронирования</div>
+        <ul class="exp-bullets">
+          <li>Разработал многопоточное многооконное приложение на WPF с применением паттерна MVVM.</li>
+          <li>Реализовал плавную навигацию между представлениями через ContentControl и выделенный навигационный сервис без пересоздания окон.</li>
+          <li>Использовал Microsoft Community Toolkit (MVVM Toolkit) — <code>ObservableObject</code>, <code>RelayCommand</code>, <code>ObservableProperty</code> для чистоты ViewModel и отсутствия бойлерплейта.</li>
+          <li>Применил инструменты генеративного AI для быстрой верстки пользовательского интерфейса и валидации форм.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Additional info -->
+    <section class="section">
+      <h2 class="section-title">Инженерные ориентиры</h2>
+      <ul class="exp-bullets">
+        <li><b>Фокус:</b> Качество и читаемость архитектуры, строгое покрытие тестами (xUnit 70%+), соблюдение контрактов API.</li>
+        <li><b>Языковой стек:</b> Основные языки — Go и C#. Активно изучаю и готов работать на C++.</li>
+        <li><b>AI Workflow:</b> Прагматичное использование AI-агентов для автоматизации рутины без потери контроля над кодом.</li>
+      </ul>
+    </section>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Руслан | Backend-разработчик (Go / C# / C++) | Portfolio</title>
+  <meta name="description" content="Портфолио бэкенд-разработчика. Go, C#, C++, ASP.NET Core, PostgreSQL, Docker, xUnit.">
+  <meta name="author" content="Руслан (Ruslan)">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Руслан | Backend Developer (Go / C# / C++)">
+  <meta property="og:description" content="RESTful & gRPC APIs, Clean Architecture, PostgreSQL, Docker, xUnit 70%+, C++, AI-assisted workflows.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://irus07.github.io/Portfolio/">
+
+  <!-- Devicon Icons (Official Developer Icons CDN) -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+
+  <!-- Ambient Glow Effects -->
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+
+  <!-- Interactive Network Background Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="nav-brand">
+        <span class="brand-bracket">&lt;</span><span>Ruslan.Dev</span><span class="brand-bracket"> /&gt;</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link" data-i18n="nav_about">Обо мне</a></li>
+        <li><a href="#skills" class="nav-link" data-i18n="nav_skills">Стек</a></li>
+        <li><a href="#projects" class="nav-link" data-i18n="nav_projects">Проекты</a></li>
+        <li><a href="#experience" class="nav-link" data-i18n="nav_experience">Опыт</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Контакты</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- RU / EN Switch -->
+        <button id="lang-switch" class="lang-switch" title="Переключить язык / Toggle language">RU</button>
+
+        <!-- Dark / Light Theme Toggle -->
+        <button id="theme-toggle" class="icon-btn" title="Сменить тему оформления" aria-label="Сменить тему">
+          <svg id="theme-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-toggle" class="mobile-toggle" aria-label="Открыть меню">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu" class="mobile-menu">
+    <a href="#about" class="nav-link mobile-link" data-i18n="nav_about">Обо мне</a>
+    <a href="#skills" class="nav-link mobile-link" data-i18n="nav_skills">Стек</a>
+    <a href="#projects" class="nav-link mobile-link" data-i18n="nav_projects">Проекты</a>
+    <a href="#experience" class="nav-link mobile-link" data-i18n="nav_experience">Опыт</a>
+    <a href="#contact" class="nav-link mobile-link" data-i18n="nav_contact">Контакты</a>
+    <div style="display:flex; gap: 10px; margin-top: 8px;">
+      <a href="resume.html" target="_blank" class="btn btn-secondary btn-sm" style="flex:1;">Резюме / PDF</a>
+      <a href="https://github.com/Irus07" target="_blank" class="btn btn-primary btn-sm" style="flex:1;">GitHub</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ====================================================================
+         Hero Section
+         ==================================================================== -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div>
+            <div class="badge">
+              <span class="badge-pulse"></span>
+              <span data-i18n="badge_status">Открыт к предложениям • Backend-разработчик (Go / C# / C++)</span>
+            </div>
+          </div>
+
+          <h1 class="hero-title">
+            <span data-i18n="hero_title">Руслан</span><br>
+            <span class="gradient-text">Backend Developer</span>
+          </h1>
+
+          <div class="hero-subtitle">
+            <span data-i18n="hero_subtitle">Backend-разработчик • Go / C# / C++</span>
+            <span style="color: var(--text-muted);">|</span>
+            <span style="color: var(--accent-emerald); font-size: 0.95rem; font-family: var(--font-mono);">Go • C# • C++ • ASP.NET Core • PostgreSQL</span>
+          </div>
+
+          <p class="hero-description" data-i18n="hero_desc">
+            Разрабатываю производительные и надежные бэкенд-сервисы на Go и C# (ASP.NET Core). Активно углубляюсь в C++ (Modern C++17/20, STL, ручное управление памятью, ООП) и готов на нем писать и работать. Фокусируюсь на чистой архитектуре (DI, Repository pattern), базах данных (PostgreSQL, Code First, LINQ) и покрытии тестами (xUnit 70%+). Ускоряю написание рутинного кода на 20–30% с помощью современных AI-инструментов.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              <span data-i18n="btn_projects">Смотреть проекты</span>
+            </a>
+
+            <a href="resume.html" target="_blank" class="btn btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+              <span data-i18n="btn_print">Резюме / PDF</span>
+            </a>
+
+            <a href="https://github.com/Irus07" target="_blank" class="btn btn-secondary" style="border-color: rgba(56, 189, 248, 0.4);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>GitHub: @Irus07</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive Terminal / API Request Card -->
+        <div class="terminal-card">
+          <div class="terminal-header">
+            <div class="terminal-controls">
+              <span class="terminal-dot dot-red"></span>
+              <span class="terminal-dot dot-yellow"></span>
+              <span class="terminal-dot dot-green"></span>
+            </div>
+            <div class="terminal-tabs">
+              <button class="term-tab-btn active" data-target="tab-api">API Inspector</button>
+              <button class="term-tab-btn" data-target="tab-terminal">Terminal</button>
+            </div>
+          </div>
+
+          <!-- Tab 1: API Inspector -->
+          <div id="tab-api" class="terminal-body term-tab-pane">
+            <div class="term-line">
+              <span class="term-prompt">$</span> <span class="term-cmd">curl -i https://api.ruslan.dev/v1/profile</span>
+            </div>
+            <div class="term-status">HTTP/2 200 OK • 1.2ms • gzip</div>
+            <pre class="term-json">{
+  <span class="json-key">"name"</span>: <span class="json-str">"Руслан"</span>,
+  <span class="json-key">"role"</span>: <span class="json-str">"Backend Developer (Go / C# / C++)"</span>,
+  <span class="json-key">"languages"</span>: [
+    <span class="json-str">"Go (Golang)"</span>,
+    <span class="json-str">"C#"</span>,
+    <span class="json-str">"C++ (Modern C++17/20, STL)"</span>,
+    <span class="json-str">"SQL"</span>
+  ],
+  <span class="json-key">"frameworks"</span>: [<span class="json-str">"ASP.NET Core"</span>, <span class="json-str">"Entity Framework Core"</span>, <span class="json-str">"WPF MVVM"</span>],
+  <span class="json-key">"database"</span>: <span class="json-str">"PostgreSQL (Code First & Migrations)"</span>,
+  <span class="json-key">"testing"</span>: <span class="json-str">"xUnit (70%+ coverage)"</span>,
+  <span class="json-key">"cpp_readiness"</span>: <span class="json-str">"Actively studying & ready to write production C++"</span>,
+  <span class="json-key">"status"</span>: <span class="json-str">"🟢 Open to job offers & internships"</span>
+}</pre>
+          </div>
+
+          <!-- Tab 2: Interactive Terminal -->
+          <div id="tab-terminal" class="terminal-body term-tab-pane" style="display: none;">
+            <div id="term-output">
+              <div class="term-line" style="color: var(--text-muted);">
+                Welcome to Ruslan's Interactive Shell v2.4.<br>
+                Type <b style="color:var(--text-accent)">help</b> to see all available commands. Try typing <b style="color:var(--accent-emerald)">sudo hire</b>!
+              </div>
+            </div>
+            <div class="term-input-row">
+              <span class="term-prompt">visitor@ruslan-dev:~$</span>
+              <input type="text" id="term-input" class="term-input" autocomplete="off" spellcheck="false" placeholder="help...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         Bento Highlights (Value Proposition & Metrics)
+         ==================================================================== -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Инженерный подход</span>
+          <h2 class="section-title">Качество кода и архитектурные решения</h2>
+          <p class="section-desc">Ключевые ориентиры в разработке бэкенд-сервисов и системных решений</p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Bento 1 -->
+          <div class="bento-card col-2">
+            <div class="bento-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="bento-card-title">Чистая архитектура и слабая связанность</h3>
+            <p class="bento-card-desc">
+              Использование паттерна «Репозиторий» и Внедрения Зависимостей (Dependency Injection) для легкой тестируемости, расширяемости и независимости бизнес-логики от внешних фреймворков и БД.
+            </p>
+          </div>
+
+          <!-- Bento 2 -->
+          <div class="bento-card">
+            <div class="bento-stat">70%+</div>
+            <h3 class="bento-card-title">Покрытие тестами</h3>
+            <p class="bento-card-desc">
+              Написание модульных и интеграционных тестов с xUnit, мокирование зависимостей и тестирование критических бизнес-сценариев.
+            </p>
+          </div>
+
+          <!-- Bento 3 -->
+          <div class="bento-card">
+            <div class="bento-stat">20-30%</div>
+            <h3 class="bento-card-title">Ускорение с AI</h3>
+            <p class="bento-card-desc">
+              Использование AI-агентов для генерации шаблонного кода, рефакторинга и прототипирования с сохранением архитектурных стандартов.
+            </p>
+          </div>
+
+          <!-- Bento 4 -->
+          <div class="bento-card col-2">
+            <div class="bento-icon" style="background: rgba(16, 185, 129, 0.1); color: var(--accent-emerald);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+              </svg>
+            </div>
+            <h3 class="bento-card-title">Работа с БД: Code First & Оптимизация LINQ</h3>
+            <p class="bento-card-desc">
+              Проектирование реляционных схем БД в PostgreSQL с миграциями через Entity Framework Core. Написание сложных запросов LINQ с фильтрацией, пагинацией и сортировкой без оверхеда.
+            </p>
+          </div>
+
+          <!-- Bento 5: C++ Ready -->
+          <div class="bento-card col-2">
+            <div class="bento-icon" style="background: rgba(56, 189, 248, 0.1); color: var(--accent-cyan);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 18l6-6-6-6"></path>
+                <path d="M8 6l-6 6 6 6"></path>
+                <line x1="12" y1="9" x2="12" y2="15"></line>
+                <line x1="9" y1="12" x2="15" y2="12"></line>
+              </svg>
+            </div>
+            <h3 class="bento-card-title">C++: Углубление и готовность писать код</h3>
+            <p class="bento-card-desc">
+              Активно изучаю C++ (Modern C++17/20, контейнеры STL, алгоритмы, ручное и умное управление памятью, RAII). Готов писать системный, быстрый и эффективный код на C++.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         Skills Matrix Section
+         ==================================================================== -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="section_skills_tag">Стек технологий</span>
+          <h2 class="section-title" data-i18n="section_skills_title">Ключевые инструменты и стек</h2>
+          <p class="section-desc" data-i18n="section_skills_desc">Технологии бэкенда, системной разработки и десктопных приложений</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="skills-filter">
+          <button class="filter-btn active" data-filter="all">Все технологии</button>
+          <button class="filter-btn" data-filter="backend">Backend & Языки</button>
+          <button class="filter-btn" data-filter="db">Базы данных & SQL</button>
+          <button class="filter-btn" data-filter="devops">Инфраструктура & DevOps</button>
+          <button class="filter-btn" data-filter="quality">Архитектура & Качество</button>
+          <button class="filter-btn" data-filter="ui">Desktop & Web UI</button>
+        </div>
+
+        <div class="skills-grid" id="skills-container">
+
+          <!-- Skill 1: C++ (Prominent) -->
+          <div class="skill-card" data-category="backend">
+            <div class="skill-card-top">
+              <div class="skill-icon">
+                <i class="devicon-cplusplus-plain colored"></i>
+              </div>
+              <div>
+                <h4 class="skill-name">C++ (Modern C++)</h4>
+                <span class="skill-category" style="color: var(--accent-cyan); font-weight: 600;">Изучаю & Готов писать</span>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag" style="border-color: rgba(56, 189, 248, 0.4); color: var(--text-accent);">C++17 / C++20</span>
+              <span class="skill-tag">STL Containers</span>
+              <span class="skill-tag">Memory Management</span>
+              <span class="skill-tag">Smart Pointers</span>
+              <span class="skill-tag">OOP & Templates</span>
+            </div>
+          </div>
+
+          <!-- Skill 2: Go (Golang) -->
+          <div class="skill-card" data-category="backend">
+            <div class="skill-card-top">
+              <div class="skill-icon">
+                <i class="devicon-go-original-wordmark colored"></i>
+              </div>
+              <div>
+                <h4 class="skill-name">Go (Golang)</h4>
+                <span class="skill-category">Backend & High Perf</span>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Goroutines</span>
+              <span class="skill-tag">Channels</span>
+              <span class="skill-tag">REST & gRPC</span>
+              <span class="skill-tag">Microservices</span>
+            </div>
+          </div>
+
+          <!-- Skill 3: C# / ASP.NET Core -->
+          <div class="skill-card" data-category="backend">
+            <div class="skill-card-top">
+              <div class="skill-icon">
+                <i class="devicon-csharp-plain colored"></i>
+              </div>
+              <div>
+                <h4 class="skill-name">C# / .NET 8+</h4>
+                <span class="skill-category">Backend Core</span>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">ASP.NET Core</span>
+              <span class="skill-tag">LINQ</span>
+              <span class="skill-tag">DI Container</span>
+              <span class="skill-tag">DTO Pattern</span>
+            </div>
+          </div>
+
+          <!-- Skill 4: PostgreSQL & SQL -->
+          <div class="skill-card" data-category="db">
+            <div class="skill-card-top">
+              <div class="skill-icon">
+                <i class="devicon-postgresql-plain colored"></i>
+              </div>
+              <div>
+                <h4 class="skill-name">PostgreSQL & SQL</h4>
+                <span class="skill-category">Relational DB</span>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Entity Framework Core</span>
+              <span class="skill-tag">Code First</span>
+              <span class="skill-tag">Migrations</span>
+              <span class="skill-tag">Query Optimization</span>
+            </div>
+          </div>
+
+          <!-- Skill 5: Docker -->
+          <div class="skill-card" data-category="devops">
+            <div class="skill-card-top">
+              <div class="skill-icon">
+                <i class="devicon-docker-plain colored"></i>
+              </div>
+              <div>
+                <h4 class="skill-name">Docker</h4>
+                <span class="skill-category">Containerization</span>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Dockerfile</span>
+              <span class="skill-tag">Docker Compose</span>
+              <span class="skill-tag">Multi-stage</span>
+              <span class="skill-tag">Containers</span>
+            </div>
+          </div>
+
+          <!-- Skill 6: Linux & Bash -->
+          <div class="skill-card" data-category="devops">
+            <div class="skill-card-top">
+              <div class="skill-icon">
+                <i class="devicon-linux-plain"></i>
+              </div>
+              <div>
+                <h4 class="skill-name">Linux & Bash</h4>
+                <span class="skill-category">OS & Scripting</span>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Bash Scripts</span>
+              <span class="skill-tag">CLI</span>
+              <span class="skill-tag">System Administration</span>
+            </div>
+          </div>
+
+          <!-- Skill 7: Git & GitHub -->
+          <div class="skill-card" data-category="devops">
+            <div class="skill-card-top">
+              <div class="skill-icon">
+                <i class="devicon-git-plain colored"></i>
+              </div>
+              <div>
+                <h4 class="skill-name">Git & CI/CD</h4>
+                <span class="skill-category">Version Control</span>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">GitHub Actions</span>
+              <span class="skill-tag">Branching</span>
+              <span class="skill-tag">Automated Deploy</span>
+              <span class="skill-tag">Git Pages</span>
+            </div>
+          </div>
+
+          <!-- Skill 8: .NET / WPF -->
+          <div class="skill-card" data-category="ui">
+            <div class="skill-card-top">
+              <div class="skill-icon">
+                <i class="devicon-dot-net-plain colored"></i>
+              </div>
+              <div>
+                <h4 class="skill-name">WPF & .NET</h4>
+                <span class="skill-category">Desktop Development</span>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">MVVM Toolkit</span>
+              <span class="skill-tag">ObservableObject</span>
+              <span class="skill-tag">ContentControl</span>
+              <span class="skill-tag">Async UI</span>
+            </div>
+          </div>
+
+          <!-- Skill 9: Vue.js -->
+          <div class="skill-card" data-category="ui">
+            <div class="skill-card-top">
+              <div class="skill-icon">
+                <i class="devicon-vuejs-plain colored"></i>
+              </div>
+              <div>
+                <h4 class="skill-name">Vue.js</h4>
+                <span class="skill-category">Frontend & SPA</span>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Vue Components</span>
+              <span class="skill-tag">HTML5 / CSS3</span>
+              <span class="skill-tag">REST Integration</span>
+            </div>
+          </div>
+
+          <!-- Skill 10: TypeScript -->
+          <div class="skill-card" data-category="ui">
+            <div class="skill-card-top">
+              <div class="skill-icon">
+                <i class="devicon-typescript-plain colored"></i>
+              </div>
+              <div>
+                <h4 class="skill-name">TypeScript</h4>
+                <span class="skill-category">Typed JavaScript</span>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Static Typing</span>
+              <span class="skill-tag">Interfaces</span>
+              <span class="skill-tag">SPA</span>
+            </div>
+          </div>
+
+          <!-- Skill 11: Testing & Quality -->
+          <div class="skill-card" data-category="quality">
+            <div class="skill-card-top">
+              <div class="skill-icon" style="color: #10b981;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <polyline points="9 12 11 14 15 10"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h4 class="skill-name">xUnit & Тестирование</h4>
+                <span class="skill-category">Code Quality (70%+)</span>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Unit Tests</span>
+              <span class="skill-tag">Integration Tests</span>
+              <span class="skill-tag">Mocking</span>
+              <span class="skill-tag">Test Coverage</span>
+            </div>
+          </div>
+
+          <!-- Skill 12: RESTful API & gRPC -->
+          <div class="skill-card" data-category="backend">
+            <div class="skill-card-top">
+              <div class="skill-icon" style="color: #38bdf8;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="skill-name">RESTful API & gRPC</h4>
+                <span class="skill-category">Network Protocols</span>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">HTTP Statuses</span>
+              <span class="skill-tag">Protobuf</span>
+              <span class="skill-tag">Swagger / OpenAPI</span>
+              <span class="skill-tag">API Contracts</span>
+            </div>
+          </div>
+
+          <!-- Skill 13: AI-Assisted Workflows -->
+          <div class="skill-card" data-category="quality">
+            <div class="skill-card-top">
+              <div class="skill-icon" style="color: #6366f1;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="skill-name">AI-Driven Engineering</h4>
+                <span class="skill-category">Productivity (+25%)</span>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">AI Agents</span>
+              <span class="skill-tag">Boilerplate Gen</span>
+              <span class="skill-tag">Refactoring</span>
+              <span class="skill-tag">Test Mocking</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         Featured Projects Section
+         ==================================================================== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="section_proj_tag">Портфолио</span>
+          <h2 class="section-title" data-i18n="section_proj_title">Реализованные проекты</h2>
+          <p class="section-desc" data-i18n="section_proj_desc">Архитектура, ключевые технические решения и примеры реализации</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: REST API System -->
+          <article class="project-card">
+            <div class="project-header-bar">
+              <span class="project-badge">Backend • REST API</span>
+              <div class="project-links">
+                <a href="https://github.com/Irus07" target="_blank" class="project-link-btn" title="View Source on GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">Booking System RESTful API</h3>
+              <p class="project-desc">
+                Высоконадежный бэкенд для системы бронирования ресурсов и управления заказами на базе ASP.NET Core и PostgreSQL.
+              </p>
+
+              <ul class="project-highlights">
+                <li>Реализованы RESTful эндпоинты (GET, POST, PUT, PATCH, DELETE) с кастомной обработкой статус-кодов и DTO-моделями.</li>
+                <li>Внедрены паттерн «Репозиторий» и Dependency Injection (DI) для обеспечения слабой связанности компонентов.</li>
+                <li>Спроектирована схема БД методом Code First с миграциями через Entity Framework Core.</li>
+                <li>Оптимизированы LINQ-запросы с комплексной фильтрацией, пагинацией и сортировкой.</li>
+                <li>Обеспечено покрытие кода тестами на уровне 70%+ с помощью xUnit (модульные и интеграционные тесты).</li>
+                <li>Использованы AI-агенты для ускорения генерации шаблонного кода и рефакторинга, сэкономив 20–30% времени разработки.</li>
+              </ul>
+
+              <div class="project-stack">
+                <span class="stack-pill">C#</span>
+                <span class="stack-pill">ASP.NET Core</span>
+                <span class="stack-pill">PostgreSQL</span>
+                <span class="stack-pill">EF Core</span>
+                <span class="stack-pill">xUnit (70%+)</span>
+                <span class="stack-pill">Docker</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: C++ High-Performance Algorithmic Engine -->
+          <article class="project-card">
+            <div class="project-header-bar">
+              <span class="project-badge" style="background: rgba(56, 189, 248, 0.15); color: var(--accent-cyan);">Systems • C++ / STL</span>
+              <div class="project-links">
+                <a href="https://github.com/Irus07" target="_blank" class="project-link-btn" title="View Source on GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">C++ High-Performance Data Engine</h3>
+              <p class="project-desc">
+                Модуль высокопроизводительной обработки данных и алгоритмических вычислений на современном C++.
+              </p>
+
+              <ul class="project-highlights">
+                <li>Применение Modern C++ (C++17/20), контейнеров STL (`std::vector`, `std::unordered_map`) и алгоритмов стандартной библиотеки.</li>
+                <li>Строгое управление памятью через RAII и умные указатели (`std::unique_ptr`, `std::shared_ptr`) с исключением утечек ресурсов.</li>
+                <li>Многопоточная обработка задач (`std::thread`, `std::mutex`, `std::atomic`) для минимизации задержек.</li>
+                <li>Демонстрация готовности писать и поддерживать продакшен-код на C++.</li>
+              </ul>
+
+              <div class="project-stack">
+                <span class="stack-pill">Modern C++</span>
+                <span class="stack-pill">STL</span>
+                <span class="stack-pill">Memory Safety</span>
+                <span class="stack-pill">Multithreading</span>
+                <span class="stack-pill">RAII</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Go Concurrent Microservice -->
+          <article class="project-card">
+            <div class="project-header-bar">
+              <span class="project-badge" style="background: rgba(0, 173, 216, 0.15); color: #00add8;">Backend • Go & Concurrency</span>
+              <div class="project-links">
+                <a href="https://github.com/Irus07" target="_blank" class="project-link-btn" title="View Source on GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">Go Concurrent Worker & gRPC</h3>
+              <p class="project-desc">
+                Легковесный высокопроизводительный микросервис на Go для фоновой неблокирующей обработки данных.
+              </p>
+
+              <ul class="project-highlights">
+                <li>Пул горутин и каналы (channels) для параллельной обработки очередей задач без блокировки потоков.</li>
+                <li>gRPC интерфейс со строгой схемой сериализации Protobuf для минимальных накладных расходов.</li>
+                <li>Минимальное потребление оперативной памяти и мгновенный холодный старт благодаря нативной компиляции Go.</li>
+              </ul>
+
+              <div class="project-stack">
+                <span class="stack-pill">Golang</span>
+                <span class="stack-pill">Goroutines</span>
+                <span class="stack-pill">Channels</span>
+                <span class="stack-pill">gRPC</span>
+                <span class="stack-pill">Docker</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: WPF Desktop Application -->
+          <article class="project-card">
+            <div class="project-header-bar">
+              <span class="project-badge" style="background: rgba(168, 85, 247, 0.15); color: var(--accent-purple);">Desktop • WPF / MVVM</span>
+              <div class="project-links">
+                <a href="https://github.com/Irus07" target="_blank" class="project-link-btn" title="View Source on GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">Booking Desktop Client (WPF)</h3>
+              <p class="project-desc">
+                Многопоточное многооконное клиентское десктоп-приложение для управления бронированиями с архитектурой MVVM.
+              </p>
+
+              <ul class="project-highlights">
+                <li>Построена чистая MVVM архитектура с использованием Microsoft Community Toolkit (`ObservableObject`, `RelayCommand`, `ObservableProperty`).</li>
+                <li>Реализована плавная навигация через `ContentControl` и сервисный слой, предотвращающая пересоздание тяжелых оконных инстансов.</li>
+                <li>Неблокирующее взаимодействие с бэкендом через асинхронные HTTP-вызовы в фоновых потоках.</li>
+                <li>Генеративные AI-инструменты применены для быстрой верстки XAML и генерации шаблонных ViewModel.</li>
+              </ul>
+
+              <div class="project-stack">
+                <span class="stack-pill">C#</span>
+                <span class="stack-pill">WPF</span>
+                <span class="stack-pill">MVVM Toolkit</span>
+                <span class="stack-pill">Multithreading</span>
+                <span class="stack-pill">REST Client</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         Experience & Engineering Philosophy
+         ==================================================================== -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="section_exp_tag">Практический опыт</span>
+          <h2 class="section-title" data-i18n="section_exp_title">Опыт разработки и подходы</h2>
+          <p class="section-desc" data-i18n="section_exp_desc">Принципы проектирования, контроль качества и оптимизация процессов</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-title">Веб-разработка: Проектирование RESTful API и архитектуры</h3>
+                <span class="timeline-date">ASP.NET Core • Go • EF Core</span>
+              </div>
+              <p class="timeline-desc">
+                Разработка масштабируемых серверных компонентов с четким разделением ответственности. Применение DTO для изоляции доменной модели, настройка валидации входных параметров, реализация идемпотентных методов и статус-кодов. Построение схемы данных Code First в PostgreSQL с контролем версий через миграции. Оптимизация сложных выборок LINQ с предотвращением проблемы N+1.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-title">C++: Системное программирование и алгоритмы</h3>
+                <span class="timeline-date">Modern C++ • STL • Память</span>
+              </div>
+              <p class="timeline-desc">
+                Активное углубление в системный язык C++: принципы работы с указателями и ссылками, управление жизненным циклом объектов через RAII, идиоматическое использование контейнеров и алгоритмов STL. Готов писать производительный, отказоустойчивый и низкоуровневый код.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-title">Контроль качества: Тестирование 70%+ с xUnit</h3>
+                <span class="timeline-date">xUnit • Мокирование • CI/CD</span>
+              </div>
+              <p class="timeline-desc">
+                Внедрение тестов как обязательной части пайплайна разработки. Модульные тесты для проверки бизнес-правил и сервисного слоя, интеграционные тесты для проверки взаимодействия контроллеров и базы данных. Высокий уровень покрытия кода тестами (70%+) гарантирует стабильность при рефакторинге и добавлении новых фич.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 4 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-title">Десктопная разработка: WPF & Community MVVM Toolkit</h3>
+                <span class="timeline-date">C# • MVVM • Многопоточность</span>
+              </div>
+              <p class="timeline-desc">
+                Создание многооконных и многопоточных настольных решений. Использование современных возможностей Community Toolkit (`ObservableObject`, `RelayCommand`, `ObservableProperty`) позволило исключить сотни строк рутинного кода и сделать ViewModel чистыми и легко тестируемыми. Реализация кастомного сервиса навигации на базе `ContentControl`.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 5 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-title">Интеграция современных AI-инструментов в разработку</h3>
+                <span class="timeline-date">AI Agents • Генерация кода • +20–30% к скорости</span>
+              </div>
+              <p class="timeline-desc">
+                Прагматичное внедрение AI-ассистентов и автономных агентов для ускорения рутинных операций: генерация начального шаблонного кода (scaffolding), написание мок-данных и заготовок для xUnit тестов, помощь в быстром прототипировании и поиске узких мест. Сокращает время вывода функционала в прод на 20–30% без ущерба для чистоты архитектуры.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         Call to Action & Contacts
+         ==================================================================== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="cta-box">
+          <h2 class="cta-title" data-i18n="section_cta_title">Готов присоединиться к инженерной команде</h2>
+          <p class="cta-desc" data-i18n="section_cta_desc">
+            Открыт к позициям Junior Backend-разработчика или стажера по направлениям Go, C# или C++. Готов быстро вникать в задачи и писать качественный код.
+          </p>
+
+          <div class="contact-methods">
+            <a href="https://github.com/Irus07" target="_blank" class="contact-pill" style="background: rgba(56, 189, 248, 0.15); border-color: rgba(56, 189, 248, 0.4); color: var(--text-primary);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>GitHub: @Irus07</span>
+            </a>
+
+            <button class="contact-pill" data-copy="https://github.com/Irus07">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span data-i18n="btn_copy_contact">Скопировать ссылку на GitHub</span>
+            </button>
+
+            <a href="resume.html" target="_blank" class="contact-pill">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+              </svg>
+              <span data-i18n="btn_print">Резюме / PDF</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <b>Руслан</b> • Backend-разработчик (Go / C# / C++) • 2026
+        <div style="font-size:0.8rem; margin-top:4px; color:var(--text-muted);">
+          Чистый Vanilla стек: 0 npm зависимостей • Высокая производительность • Сборка в GitHub Actions
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://github.com/Irus07" target="_blank">GitHub</a>
+        <a href="resume.html" target="_blank">PDF / Резюме</a>
+        <a href="#home">Вверх ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: pure vanilla JS, 0 dependencies -->
+  <script src="assets/js/canvas.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
